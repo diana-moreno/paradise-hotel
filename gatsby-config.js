@@ -5,8 +5,12 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+  // npm i @emotion/core @emotion/styled gatsby-plugin-emotion
+  // conecta emotion con gatsby, es para añadir el css en styles component
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
+      // plugin que permite leer las imágenes que se encuentran en la carpeta src/images
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
