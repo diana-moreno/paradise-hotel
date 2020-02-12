@@ -1,32 +1,53 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-
+/*import React from "react"
+import { css } from "@emotion/core"
+import styled from "@emotion/styled"
+import Layout from "./Layout"
+/*import ImagenHotel from "../components/imagenHotel"
+import ContenidoInicio from "../components/ContenidoInicio"
+import HabitacionPreview from "../components/habitacionPreview"
+import useHabitaciones from "../hooks/use-habitaciones"*/
 /*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `useStaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
- */
+const ListadoHabitaciones = styled.ul`
+  max-width: 1200px;
+  width: 95%;
+  margin: 4rem auto 0 auto;
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+  }
+`
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+const IndexPage = () => {
+  const habitaciones = useHabitaciones()
+
+  console.log(habitaciones)
+
+  return (
+    <Layout>
+      <ImagenHotel />
+
+      <ContenidoInicio />
+
+      <h2
+        css={css`
+          text-align: center;
+          margin-top: 5rem;
+          font-size: 3rem;
+        `}
+      >
+        Nuestras Habitaciones
+      </h2>
+
+      <ListadoHabitaciones>
+        {habitaciones.map(habitacion => (
+          <HabitacionPreview key={habitacion.id} habitacion={habitacion} />
+        ))}
+      </ListadoHabitaciones>
+    </Layout>
+  )
 }
 
-export default Image
+export default IndexPage
+*/
