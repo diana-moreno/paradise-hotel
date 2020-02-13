@@ -5,10 +5,12 @@ import Layout from "../components/Layout"
 import Image from "../components/image"
 import Header from "../components/Header"
 import SEO from "../components/seo"
+import HotelImage from '../components/HotelImage'
 
 const IndexPage = () => (
   <Layout>
-    <Header />
+    <HotelImage />
+  {/*  <Header />*/}
   </Layout>
 )
 
