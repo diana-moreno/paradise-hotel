@@ -6,11 +6,13 @@ import Image from "../components/image"
 import Header from "../components/Header"
 import SEO from "../components/seo"
 import HotelImage from '../components/HotelImage'
+import HomeContent from '../components/Home'
 
 const IndexPage = () => (
   <Layout>
     <HotelImage />
   {/*  <Header />*/}
+    <HomeContent />
   </Layout>
 )
 

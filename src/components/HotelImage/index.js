@@ -51,7 +51,7 @@ const HotelImage = () => {
   return (
     <ImageBackground tag='section' fluid={imageUrl} fadeIn='soft' >
       <TextImage>
-        <h1>Welcome to Paradise Hotel</h1>
+        <h1>Welcome to Paradise</h1>
         <p>Enjoy your holidays with us</p>
       </TextImage>
     </ImageBackground>

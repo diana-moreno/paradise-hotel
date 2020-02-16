@@ -1,9 +1,9 @@
-/*import React from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import styled from "@emotion/styled"
 
-const Contenido = styled.main`
+const ContentAboutUs = styled.main`
   padding-top: 4rem;
   max-width: 1200px;
   width: 95%;
@@ -26,13 +26,13 @@ const TitleAboutUs = styled.h2`
 `
 
 const AboutUsContent = () => {
-  const resultado = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
-      allDatoCmsPagina(filter: { slug: { eq: "nosotros" } }) {
+      allDatoCmsPage(filter: {slug: {eq: "about-us"}}) {
         nodes {
-          titulo
-          contenido
-          imagen {
+          title
+          content
+          image {
             fluid(maxWidth: 1200) {
               ...GatsbyDatoCmsFluid
             }
@@ -42,18 +42,17 @@ const AboutUsContent = () => {
     }
   `)
 
-  const { titulo, contenido, imagen } = resultado.allDatoCmsPagina.nodes[0]
+  const { title, content, image } = data.allDatoCmsPage.nodes[0]
 
   return (
     <>
-      <TitleAboutUs>{titulo}</TitleAboutUs>
-      <Contenido>
-        <p>{contenido}</p>
-        <Image fluid={imagen.fluid} />
-      </Contenido>
+      <TitleAboutUs>{title}</TitleAboutUs>
+      <ContentAboutUs>
+        <p>{content}</p>
+        <Image fluid={image.fluid} />
+      </ContentAboutUs>
     </>
   )
 }
 
 export default AboutUsContent
-*/
