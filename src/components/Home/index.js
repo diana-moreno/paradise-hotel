@@ -42,7 +42,7 @@ const HomeContent = () => {
     }
   `)
 
-  console.log(data.allDatoCmsPage.nodes[0])
+/*  console.log(data.allDatoCmsPage.nodes[0])*/
 
   const { title, content, image } = data.allDatoCmsPage.nodes[0]
 

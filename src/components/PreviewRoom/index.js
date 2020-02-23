@@ -31,7 +31,6 @@ const TextContainer = styled.div`
 
 const PreviewRoom = ({ room }) => {
   const { content, image, title, slug } = room
-console.log(room)
 
   return (
     <CardContainer>

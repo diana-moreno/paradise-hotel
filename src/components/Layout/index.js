@@ -3,15 +3,23 @@ import Helmet from "react-helmet"
 import { Global, css } from "@emotion/core"
 import Header from "../Header"
 import Footer from "../Footer"
-/*import useSeo from "../hooks/use-seo"*/
+import useSeo from "../../hooks/use-seo"
+import styled from '@emotion/styled';
+
+const MainContainer = styled.div`
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+`
 
 const Layout = props => {
-/*  const seo = useSeo()*/
-/*  const {
+  const seo = useSeo()
+  const {
     siteName,
     fallbackSeo: { description, title },
   } = seo
-*/
+
   return (
     <>
       <Global
@@ -19,6 +27,7 @@ const Layout = props => {
           html {
             font-size: 62.5%;
             box-sizing: border-box;
+            height: 100%
           }
           *,
           *:before,
@@ -26,10 +35,12 @@ const Layout = props => {
             box-sizing: inherit;
           }
           body {
+            margin: 0;
             font-size: 18px;
             font-size: 1.8rem;
             line-height: 1.5;
             font-family: "PT Sans", sans-serif;
+            height: 100%;
           }
           h1,
           h2,
@@ -51,16 +62,7 @@ const Layout = props => {
           }
         `}
       />
-      <Header />
-      {props.children}
-      <Footer />
-    </>
-  )
-}
-
-export default Layout
-
-/*      <Helmet>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <link
@@ -72,7 +74,15 @@ export default Layout
           rel="stylesheet"
         />
       </Helmet>
+      <MainContainer>
+        <Header />
+        <div>
+          {props.children}
+        </div>
+        <Footer title={title} />
+      </MainContainer>
+    </>
+  )
+}
 
-      <Header />
-      {props.children}
-      <Footer title={title} />*/
+export default Layout

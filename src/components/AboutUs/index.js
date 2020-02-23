@@ -2,12 +2,14 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import styled from "@emotion/styled"
+import { css } from '@emotion/core';
 
 const ContentAboutUs = styled.main`
   padding-top: 4rem;
   max-width: 1200px;
   width: 95%;
   margin: 0 auto;
+  flex: 1 0 auto;
 
   @media (min-width: 768px) {
     display: grid;
@@ -49,7 +51,11 @@ const AboutUsContent = () => {
       <TitleAboutUs>{title}</TitleAboutUs>
       <ContentAboutUs>
         <p>{content}</p>
-        <Image fluid={image.fluid} />
+        <Image
+          fluid={image.fluid}
+          css={css`
+            height: auto;
+          `}/>
       </ContentAboutUs>
     </>
   )

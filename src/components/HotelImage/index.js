@@ -30,8 +30,7 @@ const TextImage = styled.div`
             font-size: 2.6rem;
         }
     }
-`;
-
+`
 
 const HotelImage = () => {
 // importante definir el nombre de la query para poder recoger su valor

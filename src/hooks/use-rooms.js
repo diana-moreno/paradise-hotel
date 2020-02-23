@@ -30,7 +30,3 @@ const useRooms = () => {
 }
 
 export default useRooms
-
-// return sin paréntesis, porque los paréntesis son de React, no Gatsby.
-// Fragmente no es compatible con Gatsby, solo con React.
-//
