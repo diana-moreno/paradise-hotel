@@ -31,7 +31,7 @@ const HabitacionTemplate = ({
     <Layout>
       <main
         css={css`
-          margin: 0 auto;
+          margin: 5rem auto;
           max-width: 1200px;
           width: 95%;
         `}

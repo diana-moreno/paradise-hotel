@@ -12,7 +12,7 @@ const Nav = styled.nav`
 `
 const NavLink = styled(Link)`
   color: #ffffff;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1rem;
   font-family: "PT Sans", sans-serif;

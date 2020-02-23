@@ -6,9 +6,9 @@ import NavBar from "../Navbar"
 const FooterText = styled.p`
   text-align: center;
   color: #fff;
-  background-color: rgb(33, 44, 55);
+  background-color: rgba(44,62,80);
   margin: 0;
-  padding: 1rem;
+  padding: 4rem;
 `
 
 const Footer = ({ title }) => {
