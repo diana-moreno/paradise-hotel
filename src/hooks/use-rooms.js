@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby'
-// este fichero va a guardar consultas
 
 const useRooms = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +17,7 @@ const useRooms = () => {
         }
       }
     }
-  `);
+  `)
 
   return data.allDatoCmsRoom.nodes.map(room => ({
     title: room.title,

@@ -23,7 +23,7 @@ const TitleHome = styled.h2`
   text-align: center;
   font-size: 4rem;
   margin-top: 4rem;
- `
+`
 
 const HomeContent = () => {
   const data = useStaticQuery(graphql`
@@ -40,9 +40,8 @@ const HomeContent = () => {
         }
       }
     }
-  `)
-
-/*  console.log(data.allDatoCmsPage.nodes[0])*/
+  `
+)
 
   const { title, content, image } = data.allDatoCmsPage.nodes[0]
 

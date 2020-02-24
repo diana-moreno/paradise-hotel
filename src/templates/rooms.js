@@ -20,11 +20,7 @@ export const query = graphql`
   }
 `
 
-const HabitacionTemplate = ({
-  data: {
-    allDatoCmsRoom: { nodes },
-  },
-}) => {
+const RoomTemplate = ({ data: { allDatoCmsRoom: { nodes } } }) => {
   const { title, content, image } = nodes[0]
 
   return (
@@ -51,4 +47,4 @@ const HabitacionTemplate = ({
   )
 }
 
-export default HabitacionTemplate
+export default RoomTemplate

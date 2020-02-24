@@ -23,7 +23,7 @@ const RoomsList = styled.ul`
   }
 `
 
-const IndexPage = () => {
+const HomePage = () => {
   const rooms = useRooms()
 
   return (
@@ -52,4 +52,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default HomePage
