@@ -13,52 +13,52 @@ const MainContainer = styled.div`
   grid-template-columns: 100%;
 `
 
-const GlobalStyled = styled(Global)`
-  html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    height: 100%
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  body {
-    margin: 0;
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1.5;
-    font-family: "PT Sans", sans-serif;
-    height: 100%;
-  }
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-    line-height: 1.5;
-  }
-  h1,
-  h2 {
-    font-family: "Roboto", serif;
-  }
-  h3 {
-    font-family: "PT Sans", sans-serif;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-`
-
 const Layout = props => {
   const seo = useSeo()
   const { siteName, fallbackSeo: { description, title } } = seo
 
   return (
     <>
-      <GlobalStyled/>
+      <Global
+        styles={css`
+          html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+            height: 100%
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: inherit;
+          }
+          body {
+            margin: 0;
+            font-size: 18px;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            font-family: "PT Sans", sans-serif;
+            height: 100%;
+          }
+          h1,
+          h2,
+          h3 {
+            margin: 0;
+            line-height: 1.5;
+          }
+          h1,
+          h2 {
+            font-family: "Roboto", serif;
+          }
+          h3 {
+            font-family: "PT Sans", sans-serif;
+          }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+        `}
+      />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
