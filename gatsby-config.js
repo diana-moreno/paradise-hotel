@@ -5,8 +5,8 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-  // npm i @emotion/core @emotion/styled gatsby-plugin-emotion
-  // conecta emotion con gatsby, es para añadir el css en styles component
+    // npm i @emotion/core @emotion/styled gatsby-plugin-emotion
+    // conecta emotion con gatsby, es para añadir el css en styles component
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
@@ -28,14 +28,14 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-       /* icon: `src/images/gatsby-icon.png`, */// This path is relative to the root of the site.
+        icon: `src/images/8.jpg`, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: 'gatsby-source-datocms', // pluggin para acceder a la API de CMS DatoCMS
+      resolve: "gatsby-source-datocms", // pluggin para acceder a la API de CMS DatoCMS
       options: {
-        apiToken: '2717002b9bdd44e5727323424df228' // colocar el token de datoCMS. Read only-API.
-      }
-    }
+        apiToken: "2717002b9bdd44e5727323424df228", // colocar el token de datoCMS. Read only-API.
+      },
+    },
   ],
 }
